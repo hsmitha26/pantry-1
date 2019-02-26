@@ -17,7 +17,6 @@ class CookBookTest < Minitest::Test
     @ground_beef = Ingredient.new("Ground Beef", "oz", 100)
     @bun = Ingredient.new("Bun", "g", 1)
     @burger = Recipe.new("Burger")
-
   end
 
   def test_it_exists
@@ -31,14 +30,12 @@ class CookBookTest < Minitest::Test
   def test_it_can_add_recipe_to_cookbook
     @mac_and_cheese.add_ingredient(@cheese, 2)
     @mac_and_cheese.add_ingredient(@mac, 8)
-
     @cookbook.add_recipe(@mac_and_cheese)
 
     assert_equal [@mac_and_cheese], @cookbook.recipes
 
     @burger.add_ingredient(@ground_beef, 4)
     @burger.add_ingredient(@bun, 100)
-
     @cookbook.add_recipe(@burger)
 
     assert_equal [@mac_and_cheese, @burger], @cookbook.recipes

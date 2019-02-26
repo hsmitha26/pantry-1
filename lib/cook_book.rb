@@ -14,9 +14,9 @@ class CookBook
     #need to group @recipes array to match interaction pattern.
     #lots of nesting.
     #all info needed is in @recipes array. total_calories is already in recipe.rb
-    x = @recipes.group_by do |recipe_object|
+    @recipes.group_by do |recipe_object|
       recipe_object.name
     end
-    binding.pry
   end
+  
 end

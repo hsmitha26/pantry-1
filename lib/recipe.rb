@@ -23,5 +23,4 @@ class Recipe
     @ingredients_required.sum {|ingredient_object, amount| ingredient_object.calories * amount}
   end
 
-  # binding.pry
 end
